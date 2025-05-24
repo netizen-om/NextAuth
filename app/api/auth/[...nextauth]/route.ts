@@ -34,7 +34,9 @@ const handler = NextAuth({
                     // commented to remove errors
                     // id: user.id,
                     // email : user.email,
-                    id : "test123"
+                    id : "test123",
+                    name : "om123",
+                    email: "om@om.com"
                 };
             },
         })
