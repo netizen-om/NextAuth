@@ -1,4 +1,5 @@
 import CredentialsProvider from 'next-auth/providers/credentials';
+import GoogleProvider from "next-auth/providers/google";
 
 export const NEXT_AUTH = {
     providers : [
@@ -35,6 +36,10 @@ export const NEXT_AUTH = {
                     email: "om@om.com"
                 };
             },
+        }),
+        GoogleProvider({
+            clientId: process.env.GOOGLE_ID || "",
+            clientSecret: process.env.GOOGLE_SECRET || ""
         })
     ],
     secret : process.env.NEXTAUTH_URL,
