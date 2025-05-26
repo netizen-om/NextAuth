@@ -47,6 +47,9 @@ export const NEXT_AUTH = {
             clientSecret: process.env.GITHUB_SECRET || "",
         })
     ],
+    pages: {
+        signIn: "/auth", // route is `/app/auth/page.tsx`
+    },
     secret : process.env.NEXTAUTH_URL,
     callbacks : {
         jwt : ({ token, user } : any) => {
